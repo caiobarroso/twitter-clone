@@ -17,7 +17,7 @@ export default function Home({ trendingResults, followResults, providers }) {
   return (
     <div>
       <Head>
-        <title>Twitter-Clone</title>
+        <title>Twitter</title>
       </Head>
 
       <main className="bg-black min-h-screen flex mx-auto max-w-[1500px]">
