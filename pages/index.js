@@ -23,10 +23,10 @@ export default function Home({ trendingResults, followResults, providers }) {
       <main className="bg-black min-h-screen flex mx-auto max-w-[1500px]">
         <Sidebar />
         <Feed />
-        <Widgets
+        {/* <Widgets
           trendingResults={trendingResults}
           followResults={followResults}
-        />
+        /> */}
         {isOpen && <Modal />}
       </main>
     </div>
@@ -34,19 +34,19 @@ export default function Home({ trendingResults, followResults, providers }) {
 }
 
 export async function getServerSideProps(context) {
-  const trendingResults = await fetch('https://jsonkeeper.com/b/NKEV').then(
-    (res) => res.json()
-  );
-  const followResults = await fetch('https://jsonkeeper.com/b/WWMJ').then(
-    (res) => res.json()
-  );
+  // const trendingResults = await fetch('https://jsonkeeper.com/b/NKEV').then(
+  //   (res) => res.json()
+  // );
+  // const followResults = await fetch('https://jsonkeeper.com/b/WWMJ').then(
+  //   (res) => res.json()
+  // );
   const providers = await getProviders();
   const session = await getSession(context);
 
   return {
     props: {
-      trendingResults,
-      followResults,
+      // trendingResults,
+      // followResults,
       providers,
       session,
     },
